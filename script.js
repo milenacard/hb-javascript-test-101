@@ -74,7 +74,26 @@ function FuctionalIsPalindrome(str){
 }
 
 /* Create a Class in Javascript that represents a person capable of having “name” and “age” as instance variables, and a method that prints out the name into the console.*/
+class Person{
 
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    printName(){
+        console.log(this.name);
+    }
+
+    get Age(){
+        return this.age();
+    }
+}
+
+/*Create a function that is capable of receiving an instance of the Person Class and print into the console it’s age. */
+function printOutPersonAge(person){
+    console.log(person.age);
+}
 
 
 
@@ -116,3 +135,9 @@ console.log(FuctionalIsPalindrome('deep'));
 console.log(FuctionalIsPalindrome('deed'));
 console.log(FuctionalIsPalindrome('anitalavalatina'));
 
+console.log("Prints out the name of a object Person into the console");
+const student = new Person('John', 25);
+student.printName();
+
+console.log("Prints out the age of a object Person into the console");
+printOutPersonAge(student);
