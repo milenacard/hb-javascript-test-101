@@ -68,10 +68,12 @@ function isPalindrome(str){
          return isPalindrome(str.substring(1, str.length - 1));
 }
 
+/*Using function split(), reverse(), join()*/
 function FuctionalIsPalindrome(str){
     return str === str.split('').reverse().join('');
 }
 
+/* Create a Class in Javascript that represents a person capable of having “name” and “age” as instance variables, and a method that prints out the name into the console.*/
 
 
 
@@ -107,8 +109,10 @@ console.log("new Function(5+2) is "+ PrintType(new Function("5+2")));
 console.log("Returning if a string is a palindrome or not: ");
 console.log(isPalindrome('deep'));
 console.log(isPalindrome('deed'));
+console.log(isPalindrome('anitalavalatina'));
 
 console.log("Returning if a string is a palindrome or not: -Function split, reverse and join ");
 console.log(FuctionalIsPalindrome('deep'));
 console.log(FuctionalIsPalindrome('deed'));
+console.log(FuctionalIsPalindrome('anitalavalatina'));
 
