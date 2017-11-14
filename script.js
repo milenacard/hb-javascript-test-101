@@ -55,9 +55,22 @@ function functionalMapNumbersIntoStrings(arr){
     return arr.map(function(val){
         return val.toString();
     });
-    
+}
+ /*Create a function that is capable of printing into the console the type of the passed variable. */
+function PrintType(val){
+        return typeof(val);
     }
 
+/*Create a function that is capable of identify if the passed string is a palindrome or not. It should return a boolean. */
+function isPalindrome(str){
+     if(str.length < 2) {return true;}
+         if(str.charAt(0) != str.charAt(str.length - 1)){return false;}
+         return isPalindrome(str.substring(1, str.length - 1));
+}
+
+function FuctionalIsPalindrome(str){
+    return str === str.split('').reverse().join('');
+}
 
 
 
@@ -84,3 +97,18 @@ console.log(mapNumbersIntoStrings([-4, -6, -5, 0, 34, 54, -7]));
 
 console.log("Maping an array of numbers into strings - Function map :")
 console.log(functionalMapNumbersIntoStrings([-4, -6, -5, 0, 34, 54, -7]));
+
+console.log("Printing into the console the type of the passed variable - function Typeof");
+console.log("'1' is "+ PrintType('1'));
+console.log("5.4 is "+ PrintType(5.4));
+console.log("new Date() is "+ PrintType(new Date()));
+console.log("new Function(5+2) is "+ PrintType(new Function("5+2")));
+
+console.log("Returning if a string is a palindrome or not: ");
+console.log(isPalindrome('deep'));
+console.log(isPalindrome('deed'));
+
+console.log("Returning if a string is a palindrome or not: -Function split, reverse and join ");
+console.log(FuctionalIsPalindrome('deep'));
+console.log(FuctionalIsPalindrome('deed'));
+
