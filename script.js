@@ -95,8 +95,6 @@ function printOutPersonAge(person){
     console.log(person.age);
 }
 
-
-
 //Show result in console
 console.log("Generate RGB Random: ")
 console.log(generateRandomNumber());
@@ -116,10 +114,10 @@ console.log(functionalFilterNegativeNumbers([]));
 console.log("Maping an array of numbers into strings ")
 console.log(mapNumbersIntoStrings([-4, -6, -5, 0, 34, 54, -7]));
 
-console.log("Maping an array of numbers into strings - Function map :")
+console.log("Maping an array of numbers into strings - Function map:")
 console.log(functionalMapNumbersIntoStrings([-4, -6, -5, 0, 34, 54, -7]));
 
-console.log("Printing into the console the type of the passed variable - function Typeof");
+console.log("Printing into the console the type of the passed variable - function Typeof: ");
 console.log("'1' is "+ PrintType('1'));
 console.log("5.4 is "+ PrintType(5.4));
 console.log("new Date() is "+ PrintType(new Date()));
@@ -130,14 +128,14 @@ console.log(isPalindrome('deep'));
 console.log(isPalindrome('deed'));
 console.log(isPalindrome('anitalavalatina'));
 
-console.log("Returning if a string is a palindrome or not: -Function split, reverse and join ");
+console.log("Returning if a string is a palindrome or not: -Function split, reverse and join: ");
 console.log(FuctionalIsPalindrome('deep'));
 console.log(FuctionalIsPalindrome('deed'));
 console.log(FuctionalIsPalindrome('anitalavalatina'));
 
-console.log("Prints out the name of a object Person into the console");
+console.log("Prints out the name of a object Person into the console: ");
 const student = new Person('John', 25);
 student.printName();
 
-console.log("Prints out the age of a object Person into the console");
+console.log("Prints out the age of a object Person into the console: ");
 printOutPersonAge(student);
