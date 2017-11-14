@@ -28,18 +28,18 @@ function filterNegativeNumbers(arr){
             newArray.push(arr[index]);
         }
     }
-
     return newArray;
 }
 
-/*
+
 function functionalFilterNegativeNumbers(arr){
 
-    return array.filter();
-    
-}*/
+    return arr.filter(function(val){
+        return val >= 0;
+    });
+}
 
-
+//Show result in console
 
 console.log("Generate RGB Random: ")
 console.log(generateRandomNumber());
@@ -49,3 +49,9 @@ console.log(filterNegativeNumbers([-4, -6, -5, 0, 34, 54, -7]));
 console.log(filterNegativeNumbers([4, 6, 5, 0, 34, 54, 7]));
 console.log(filterNegativeNumbers([-4, -6, -5, 0, -34, -54, -7]));
 console.log(filterNegativeNumbers([]));
+
+console.log("Filter Negative Numbers - function filter: ")
+console.log(functionalFilterNegativeNumbers([-4, -6, -5, 0, 34, 54, -7]));
+console.log(functionalFilterNegativeNumbers([4, 6, 5, 0, 34, 54, 7]));
+console.log(functionalFilterNegativeNumbers([-4, -6, -5, 0, -34, -54, -7]));
+console.log(functionalFilterNegativeNumbers([]));
