@@ -1,6 +1,6 @@
 
 /* Create a function that is capable of generate a random RGB color object. */
-function generateRandomNumber(){
+export function generateRandomColor(){
     let generateRgb;
     let red;
     let green;
@@ -20,7 +20,7 @@ function generateRandomNumber(){
 }
 
 /*Create a function that is capable of filtering out numbers less than 0 from an array of numbers. */
-function filterNegativeNumbers(arr){
+export function filterNegativeNumbers(arr){
     let newArray = [];
 
     for (var index = 0; index < arr.length; index++) {
@@ -32,7 +32,7 @@ function filterNegativeNumbers(arr){
 }
 
 /*Using function filter() */
-function functionalFilterNegativeNumbers(arr){
+export function functionalFilterNegativeNumbers(arr){
 
     return arr.filter(function(val){
         return val >= 0;
@@ -40,7 +40,7 @@ function functionalFilterNegativeNumbers(arr){
 }
 
 /*Create a function that is capable of maping an array of numbers into strings. */
-function mapNumbersIntoStrings(arr){
+export function mapNumbersIntoStrings(arr){
     let newArray = [];
 
     for (var index = 0; index < arr.length; index++) {
@@ -50,31 +50,32 @@ function mapNumbersIntoStrings(arr){
 }
 
 /*Using function Map() */
-function functionalMapNumbersIntoStrings(arr){
+export function functionalMapNumbersIntoStrings(arr){
 
     return arr.map(function(val){
         return val.toString();
     });
 }
+
  /*Create a function that is capable of printing into the console the type of the passed variable. */
-function PrintType(val){
+ export function PrintType(val){
         return typeof(val);
     }
 
 /*Create a function that is capable of identify if the passed string is a palindrome or not. It should return a boolean. */
-function isPalindrome(str){
+export function isPalindrome(str){
      if(str.length < 2) {return true;}
          if(str.charAt(0) != str.charAt(str.length - 1)){return false;}
          return isPalindrome(str.substring(1, str.length - 1));
 }
 
 /*Using function split(), reverse(), join()*/
-function FuctionalIsPalindrome(str){
+export function FuctionalIsPalindrome(str){
     return str === str.split('').reverse().join('');
 }
 
 /* Create a Class in Javascript that represents a person capable of having “name” and “age” as instance variables, and a method that prints out the name into the console.*/
-class Person{
+export class Person{
 
     constructor(name, age){
         this.name = name;
@@ -91,13 +92,14 @@ class Person{
 }
 
 /*Create a function that is capable of receiving an instance of the Person Class and print into the console it’s age. */
-function printOutPersonAge(person){
+export function printOutPersonAge(person){
     console.log(person.age);
 }
 
+/*
 //Show result in console
 console.log("Generate RGB Random: ")
-console.log(generateRandomNumber());
+console.log(generateRandomColor());
 
 console.log("Filter Negative Numbers - function pure: ")
 console.log(filterNegativeNumbers([-4, -6, -5, 0, 34, 54, -7]));
@@ -139,3 +141,5 @@ student.printName();
 
 console.log("Prints out the age of a object Person into the console: ");
 printOutPersonAge(student);
+
+*/

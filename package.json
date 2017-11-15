@@ -1,0 +1,24 @@
+{
+  "name": "hb-javascript-test-101",
+  "version": "1.0.0",
+  "description": "This repository is containing examples of how to implement and test the first challenge given in the Bootcamp.",
+  "private": true,
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milenacard/hb-javascript-test-101.git"
+  },
+  "author": "Milena Cárdenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milenacard/hb-javascript-test-101/issues"
+  },
+  "homepage": "https://github.com/milenacard/hb-javascript-test-101#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1"
+  }
+}
