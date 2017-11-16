@@ -58,7 +58,7 @@ export function functionalMapNumbersIntoStrings(arr){
 }
 
  /*Create a function that is capable of printing into the console the type of the passed variable. */
- export function PrintType(val){
+ export function printType(val){
         return typeof(val);
     }
 
@@ -120,10 +120,10 @@ console.log("Maping an array of numbers into strings - Function map:")
 console.log(functionalMapNumbersIntoStrings([-4, -6, -5, 0, 34, 54, -7]));
 
 console.log("Printing into the console the type of the passed variable - function Typeof: ");
-console.log("'1' is "+ PrintType('1'));
-console.log("5.4 is "+ PrintType(5.4));
-console.log("new Date() is "+ PrintType(new Date()));
-console.log("new Function(5+2) is "+ PrintType(new Function("5+2")));
+console.log("'1' is "+ printType('1'));
+console.log("5.4 is "+ printType(5.4));
+console.log("new Date() is "+ printType(new Date()));
+console.log("new Function(5+2) is "+ pintType(new Function("5+2")));
 
 console.log("Returning if a string is a palindrome or not: ");
 console.log(isPalindrome('deep'));
