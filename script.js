@@ -59,7 +59,7 @@ export function functionalMapNumbersIntoStrings(arr){
 
  /*Create a function that is capable of printing into the console the type of the passed variable. */
  export function printType(val){
-        return typeof(val);
+        console.log(typeof(val));
     }
 
 /*Create a function that is capable of identify if the passed string is a palindrome or not. It should return a boolean. */

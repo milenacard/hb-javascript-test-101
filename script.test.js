@@ -7,8 +7,8 @@ import {
     printType,
     isPalindrome,
     FuctionalIsPalindrome,
-    //Person,
-    //printOutPersonAge
+    Person,
+    printOutPersonAge
 } from './script.js';
 
 describe('generateRandomColor', () => {
@@ -54,21 +54,35 @@ describe('mapNumbersIntoStrings', () =>{
 });
 
 describe('printType', () => {
-
-    it('should show the string type of a variable', () => {
-        expect(printType('1')).toBe('string');
+    
+    it('should call console function', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printType(1);
+        expect(spy).toHaveBeenCalled();
     });
 
-    it('should show the float type of a variable', () => {
-        expect(printType(4)).toBe('number');
+    it('should print in console the string type of a variable', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printType('1');
+        expect(spy).toHaveBeenLastCalledWith('string');
     });
 
-    it('should show the object type of a variable', () => {
-        expect(printType(new Date())).toBe('object');
+    it('should print in console the float type of a variable', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printType(4)
+        expect(spy).toHaveBeenLastCalledWith('number');
     });
 
-    it('should show the function type of a variable', () => {
-        expect(printType(new Function("5+2"))).toBe('function');
+    it('should print in console the object type of a variable', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printType(new Date());
+        expect(spy).toHaveBeenLastCalledWith('object');
+    });
+
+    it('should print in console the function type of a variable', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printType(new Function("5+2"));
+        expect(spy).toHaveBeenLastCalledWith('function');
     });
 });
 
@@ -89,6 +103,28 @@ describe('isPalindrome', () => {
         expect(FuctionalIsPalindrome('deep')).toBe(false);
         expect(FuctionalIsPalindrome('root')).toBe(false);
         expect(FuctionalIsPalindrome('rodar')).toBe(false);       
+    });
+});
+
+describe('Person', () => {
+    let personInstance;
+    personInstance = new Person('John', 100);
+
+    it('should return an instance with the correct values when calling it as a constructor', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        personInstance.printName();
+        expect(spy).toHaveBeenLastCalledWith('John');
+    });
+});
+
+describe('printOutPersonAge', () => {
+    let personInstance;
+    personInstance = new Person('John', 100);
+
+    it('should print in console the age of the given instance', () => {
+        const spy = jest.spyOn(global.console, 'log');
+        printOutPersonAge(new Person('John', 100));
+        expect(spy).toHaveBeenLastCalledWith(100);
     });
 });
 
