@@ -85,10 +85,6 @@ export class Person{
     printName(){
         console.log(this.name);
     }
-
-    get Age(){
-        return this.age();
-    }
 }
 
 /*Create a function that is capable of receiving an instance of the Person Class and print into the console it’s age. */
